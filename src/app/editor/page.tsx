@@ -60,7 +60,7 @@ export default function Page() {
     // Check if exam already exists in Firestore
     const attrReq = await fetch(`/api/editor/attr?id=${examId}`);
     if (attrReq.status === 200) {
-      alert('既に使われている試験IDです。再編集する場合、既存の試験を編集ボタンを押してください。');
+      alert('既に使われている試験IDです。テストを再編集する場合、既存の試験を編集ボタンを押してください。');
       //router.push(`/exam/${examId}`);
     } else {
       const res = await fetch('/api/editor/attr', {
