@@ -21,7 +21,7 @@ export const FormElemRenderer = ({
       <div className="mb-4 flex">
         <div className="flex w-full flex-col gap-2">
           <h2 className="w-full scroll-m-20 border-b pb-2 text-xl font-semibold tracking-tight first:mt-0">
-            問題{count++}. {elem.title}
+            {elem.title}
           </h2>
           {elem.tags.length >= 1 && (
             <div className="flex gap-2">

@@ -87,6 +87,7 @@ export const FormElemQRenderer = ({
             _setElement({ ...element, answers: [parseInt(value)] });
           }}
           disabled={element.readonly}
+          className="flex flex-wrap gap-x-8 gap-y-4"//追加したやつ
         >
           {element.options.map((option, i) => (
             <div key={i + 1} className="flex items-center gap-2">
