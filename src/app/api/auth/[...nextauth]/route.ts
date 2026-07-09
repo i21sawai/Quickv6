@@ -42,6 +42,8 @@ const handler = NextAuth({
             email: CLIENT_EMAIL,
             key: PRIVATE_KEY,
             scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+            subject: CLIENT_EMAIL,
+            clientId: process.env.SA_CLIENT_ID
           });
 
           const doc = new GoogleSpreadsheet(SPREADSHEET_ID, serviceAccountAuth);
