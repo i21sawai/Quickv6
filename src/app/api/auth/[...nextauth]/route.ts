@@ -14,6 +14,12 @@ const handler = NextAuth({
         password: { label: 'パスワード', type: 'password' },
       },
       async authorize(credentials, req) {
+        console.log("★SA_CLIENT_EMAIL等が存在するかチェック:", {
+    hasEmail: !!process.env.SA_CLIENT_EMAIL,
+    hasKey: !!process.env.SA_PRIVATE_KEY,
+    hasSpreadsheetId: !!process.env.USER_SPREADSHEET_ID,
+    keyFirstChars: process.env.SA_PRIVATE_KEY?.substring(0, 30) // 最初の30文字だけ確認
+  });
         // Add logic here to look up the user from the credentials supplied
         let user:
           | {
